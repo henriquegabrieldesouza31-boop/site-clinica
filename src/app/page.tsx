@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Contato from "@/components/contato";
 
 const servicos = [
@@ -93,28 +94,40 @@ export default function Home() {
             aria-hidden
             className="pointer-events-none absolute -bottom-40 -left-24 h-80 w-80 rounded-full bg-gradient-to-tr from-emerald-100 to-teal-300 opacity-60 blur-3xl"
           />
-          <div className="relative mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
-            <h1 className="max-w-2xl text-4xl font-semibold tracking-tight text-zinc-900 sm:text-5xl">
-              Um sorriso saudável começa com cuidado de verdade
-            </h1>
-            <p className="mt-5 max-w-xl text-lg text-zinc-600">
-              A Clínica Sorriso Claro reúne odontologia completa, tecnologia
-              moderna e uma equipe que trata cada paciente pelo nome. Da limpeza
-              ao implante, você é acompanhado em cada etapa.
-            </p>
-            <div className="mt-8">
-              <a
-                href="#contato"
-                className="inline-block rounded-full bg-teal-600 px-6 py-3 font-medium text-white transition-colors hover:bg-teal-700"
-              >
-                Agendar consulta
-              </a>
+          <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:px-8">
+            <div>
+              <h1 className="max-w-2xl text-4xl font-semibold tracking-tight text-zinc-900 sm:text-5xl">
+                Um sorriso saudável começa com cuidado de verdade
+              </h1>
+              <p className="mt-5 max-w-xl text-lg text-zinc-600">
+                A Clínica Sorriso Claro reúne odontologia completa, tecnologia
+                moderna e uma equipe que trata cada paciente pelo nome. Da limpeza
+                ao implante, você é acompanhado em cada etapa.
+              </p>
+              <div className="mt-8">
+                <a
+                  href="#contato"
+                  className="inline-block rounded-full bg-teal-600 px-6 py-3 font-medium text-white transition-colors hover:bg-teal-700"
+                >
+                  Agendar consulta
+                </a>
+              </div>
+            </div>
+            <div className="relative">
+              <Image
+                src="/dentista-tratamento.jpg"
+                alt="Dentista realizando tratamento em paciente durante consulta"
+                width={1920}
+                height={1280}
+                priority
+                className="w-full rounded-3xl object-cover shadow-sm ring-1 ring-zinc-200"
+              />
             </div>
           </div>
         </section>
 
         <section id="sobre" className="scroll-mt-24 border-t border-zinc-100 bg-zinc-50 py-20">
-          <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+          <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
             <div>
               <h2 className="text-3xl font-semibold tracking-tight text-zinc-900 sm:text-4xl">
                 Sobre a Clínica Sorriso Claro
@@ -132,29 +145,38 @@ export default function Home() {
                 orientações claras para o dia a dia.
               </p>
             </div>
-            <div className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-zinc-100">
-              <dl className="grid grid-cols-2 gap-8">
-                <div>
-                  <dt className="text-sm text-zinc-500">Pacientes atendidos</dt>
-                  <dd className="mt-1 text-4xl font-semibold text-teal-700">+8.000</dd>
-                </div>
-                <div>
-                  <dt className="text-sm text-zinc-500">Anos de estrada</dt>
-                  <dd className="mt-1 text-4xl font-semibold text-teal-700">10+</dd>
-                </div>
-                <div>
-                  <dt className="text-sm text-zinc-500">Especialistas</dt>
-                  <dd className="mt-1 text-4xl font-semibold text-teal-700">12</dd>
-                </div>
-                <div>
-                  <dt className="text-sm text-zinc-500">Avaliação média</dt>
-                  <dd className="mt-1 text-4xl font-semibold text-teal-700">4,9</dd>
-                </div>
-              </dl>
-              <p className="mt-8 border-t border-zinc-100 pt-6 text-zinc-600">
-                Atendimento humanizado, esterilização rigorosa e agenda
-                flexível, incluindo horários noturnos e sábados.
-              </p>
+            <div className="flex flex-col gap-6">
+              <Image
+                src="/sala-clinica.jpg"
+                alt="Sala de atendimento da clínica com cadeira odontológica e equipamentos modernos"
+                width={1920}
+                height={2876}
+                className="h-64 w-full rounded-3xl object-cover object-center shadow-sm ring-1 ring-zinc-200"
+              />
+              <div className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-zinc-100">
+                <dl className="grid grid-cols-2 gap-8">
+                  <div>
+                    <dt className="text-sm text-zinc-500">Pacientes atendidos</dt>
+                    <dd className="mt-1 text-4xl font-semibold text-teal-700">+8.000</dd>
+                  </div>
+                  <div>
+                    <dt className="text-sm text-zinc-500">Anos de estrada</dt>
+                    <dd className="mt-1 text-4xl font-semibold text-teal-700">10+</dd>
+                  </div>
+                  <div>
+                    <dt className="text-sm text-zinc-500">Especialistas</dt>
+                    <dd className="mt-1 text-4xl font-semibold text-teal-700">12</dd>
+                  </div>
+                  <div>
+                    <dt className="text-sm text-zinc-500">Avaliação média</dt>
+                    <dd className="mt-1 text-4xl font-semibold text-teal-700">4,9</dd>
+                  </div>
+                </dl>
+                <p className="mt-8 border-t border-zinc-100 pt-6 text-zinc-600">
+                  Atendimento humanizado, esterilização rigorosa e agenda
+                  flexível, incluindo horários noturnos e sábados.
+                </p>
+              </div>
             </div>
           </div>
         </section>
